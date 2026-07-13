@@ -7,18 +7,17 @@
 from controller import usuario_controller
 
 
-def tela_listar_texto():
+def tela_listar_produtos():
     """
-    Exibe no terminal a lista de todos os logins cadastrados.
-    Não exibe as senhas.
+    Exibe no terminal a lista de todos os produtos cadastrados.
     """
-    print("=== LISTA DE USUÁRIOS ===")
-    logins = usuario_controller.controlador_listar_usuarios()
+    print("=== LISTA DE PRODUTOS ===")
+    produtos = usuario_controller.controlador_listar_produtos()
 
-    if len(logins) == 0:
-        print("Nenhum usuário cadastrado.")
+    if len(produtos) == 0:
+        print("Nenhum produto cadastrado.")
     else:
-        for login in logins:
-            print("-", login)
+        for produto in produtos:
+            print("-", produto)
 
     print()

@@ -18,10 +18,10 @@
 
 from view_texto.login_view_texto import tela_login_texto
 from view_texto.menu_view_texto import tela_menu_texto
-from view_texto.inserir_view_texto import tela_inserir_texto
-from view_texto.pesquisar_view_texto import tela_pesquisar_texto
-from view_texto.remover_view_texto import tela_remover_texto
-from view_texto.listar_view_texto import tela_listar_texto
+from view_texto.inserir_view_texto import tela_inserir_produto
+from view_texto.pesquisar_view_texto import tela_pesquisar_produto
+from view_texto.remover_view_texto import tela_remover_produto
+from view_texto.listar_view_texto import tela_listar_produtos
 
 """
 Função que exibe o cabeçalho do programa.
@@ -29,9 +29,9 @@ Usada a cada vez que chamamos uma tela a partir do menu
 """
 def exibir_cabecalho():
     print("\033c", end="")  # Limpa a tela do terminal
-    print("############################################")
-    print("   SISTEMA DE CADASTRO DE USUÁRIOS (TEXTO)")
-    print("############################################\n")
+    print("-"*30)
+    print("   SISTEMA LOJA MMACESSÓRIOS")
+    print("-"*30)
 
 
 def main():
@@ -62,25 +62,21 @@ def main():
 
         if opcao == "1":
             exibir_cabecalho()
-            tela_inserir_texto()
+            tela_inserir_produto()
 
         elif opcao == "2":
             exibir_cabecalho()
-            tela_pesquisar_texto()
+            tela_pesquisar_produto()
 
         elif opcao == "3":
             exibir_cabecalho()
-            tela_remover_texto()
-            
+            tela_remover_produto()
+
         elif opcao == "4":
             exibir_cabecalho()
-            tela_listar_texto()
+            tela_listar_produtos()
 
         elif opcao == "5":
-            print("Sessão encerrada. Até logo!\n")
-            autenticado = False
-
-        elif opcao == "6":
             print("Programa fechado. Até logo!\n")
             break
 
@@ -92,5 +88,5 @@ def main():
 
 # Só executa a função main() quando o arquivo for rodado diretamente
 # (e não quando for apenas importado por outro arquivo)
-if __name__ == "__main__":
-    main()
+""" if __name__ == "__main__": """
+main()

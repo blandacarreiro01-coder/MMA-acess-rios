@@ -4,7 +4,7 @@
 # Camada VIEW (Visão) - Menu Principal em modo TEXTO (terminal)
 #
 # Mostra as opções do sistema e devolve a opção escolhida pelo
-# usuário. Não faz nenhuma regra de negócio, apenas exibe o menu.
+# produto. Não faz nenhuma regra de negócio, apenas exibe o menu.
 # ============================================================
 
 
@@ -14,12 +14,11 @@ def tela_menu_texto(usuario_logado):
     """
     print("=== MENU PRINCIPAL ===")
     print(f"Usuário logado: {usuario_logado}")
-    print("1 - Inserir usuário")
-    print("2 - Pesquisar usuário")
-    print("3 - Remover usuário")
-    print("4 - Listar todos os usuários")
-    print("5 - Logout")
-    print("6 - Encerrar")
+    print("1 - Inserir produto")
+    print("2 - Pesquisar produto")
+    print("3 - Remover produto")
+    print("4 - Listar todos os produtos")
+    print("5 - Encerrar")
 
     opcao = input("Escolha uma opção: ")
     print()  # linha em branco para organizar a saída
